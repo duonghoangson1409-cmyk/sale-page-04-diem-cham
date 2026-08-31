@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hệ Thống 04 Điểm Chạm | Chấm dứt cảnh ngày có đơn ngày không</title>
+<meta name="description" content="7 ngày có đơn. 30 ngày đơn về đều mỗi ngày, tháng sau hơn tháng trước. Dành cho chủ quán ăn bán trên GrabFood, ShopeeFood, BeFood. Circle Marketing đã dựng cho hơn 200 quán.">
+
+<meta property="og:title" content="Chấm dứt cảnh ngày có đơn ngày không">
+<meta property="og:description" content="7 ngày có đơn. 30 ngày đơn về đều mỗi ngày, tháng sau hơn tháng trước.">
+<meta property="og:type" content="website">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cam: '#FB6D44',
+        camdam: '#E8512A',
+        do: '#D82525',
+        kem: '#FBEFD9',
+        vang: '#FFE579',
+        xanh: '#0FB75A',
+        nen: '#FFFBF6',
+        muc: '#2A1A14'
+      },
+      fontFamily: {
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'Open Sans', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+  html { scroll-behavior: smooth; }
+  .soc { box-shadow: 0 10px 30px rgba(216,37,37,.12); }
+</style>
+</head>
+
+<body class="bg-nen text-muc antialiased">
+
+<!-- ==== PHẦN 1: ĐẦU TRANG ==== -->
+<header class="relative overflow-hidden bg-gradient-to-b from-cam to-camdam text-white">
+  <div class="max-w-4xl mx-auto px-5 pt-12 pb-16 sm:pt-16 sm:pb-20 text-center">
+
+    <p class="inline-block bg-white/15 border border-white/30 rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide">
+      Dành cho chủ quán ăn, mới mở hay đã bán vài năm
+    </p>
+
+    <h1 class="mt-6 text-3xl sm:text-5xl font-black leading-tight">
+      Chấm dứt cảnh<br>
+      <span class="bg-vang text-do px-3 py-1 inline-block rounded-lg mt-2">“ngày có đơn ngày không”</span>
+    </h1>
+
+    <p class="mt-6 text-lg sm:text-2xl font-semibold leading-snug">
+      7 ngày có đơn.<br class="sm:hidden">
+      30 ngày đơn về đều mỗi ngày, tháng sau hơn tháng trước.
+    </p>
+
+    <p class="mt-4 text-white/90 max-w-xl mx-auto">
+      Hệ Thống 04 Điểm Chạm giúp app tự đẩy gian hàng của anh/chị, thay vì tháng nào cũng phải mua đơn bằng khuyến mãi.
+    </p>
+
+    <a href="#dat-coc" class="mt-8 inline-block bg-white text-do font-heading font-extrabold text-lg sm:text-xl px-10 py-5 rounded-xl shadow-xl hover:scale-105 transition">
+      Đặt cọc 500.000đ
+    </a>
+    <p class="mt-3 text-sm text-white/85">Nghiệm thu xong mới trả nốt phần còn lại</p>
+
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+      <div class="bg-white/12 rounded-xl py-4 px-4 border border-white/20 flex sm:flex-col items-center sm:items-stretch gap-4 sm:gap-0 text-left sm:text-center">
+        <p class="text-3xl font-heading font-black shrink-0 w-20 sm:w-auto">200+</p>
+        <p class="text-sm text-white/85 sm:mt-1 leading-snug">thương hiệu đã kiểm chứng</p>
+      </div>
+      <div class="bg-white/12 rounded-xl py-4 px-4 border border-white/20 flex sm:flex-col items-center sm:items-stretch gap-4 sm:gap-0 text-left sm:text-center">
+        <p class="text-3xl font-heading font-black shrink-0 w-20 sm:w-auto">5</p>
+        <p class="text-sm text-white/85 sm:mt-1 leading-snug">năm đồng hành và phát triển cùng các thương hiệu F&amp;B</p>
+      </div>
+      <div class="bg-white/12 rounded-xl py-4 px-4 border border-white/20 flex sm:flex-col items-center sm:items-stretch gap-4 sm:gap-0 text-left sm:text-center">
+        <p class="text-3xl font-heading font-black shrink-0 w-20 sm:w-auto">90%</p>
+        <p class="text-sm text-white/85 sm:mt-1 leading-snug">khách hàng hài lòng</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==== PHẦN 2: NỖI ĐAU ==== -->
+<section class="py-14 sm:py-20 px-5">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-4xl font-black text-center leading-tight">Anh/chị thấy quen không?</h2>
+
+    <div class="mt-8 space-y-3">
+      <div class="bg-white rounded-xl p-5 border-l-4 border-do soc">
+        <p class="font-semibold">Ngày có đơn, ngày không có đơn. Không hiểu vì sao.</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 border-l-4 border-do soc">
+        <p class="font-semibold">Ngày nào bật khuyến mãi thì có đơn. Tắt đi là im.</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 border-l-4 border-do soc">
+        <p class="font-semibold">Cuối tháng cộng lại, không biết mình lãi hay lỗ.</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 border-l-4 border-do soc">
+        <p class="font-semibold">Không dám thuê thêm người, không dám nhập nhiều hàng, vì không biết tháng sau có đơn không.</p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-center text-xl sm:text-3xl font-heading font-black text-do leading-snug">
+      Cái mệt nhất không phải ít đơn.<br>Cái mệt nhất là không đoán được.
+    </p>
+  </div>
+</section>
+
+<!-- ==== PHẦN 3: HAI LOẠI HIỂN THỊ ==== -->
+<section class="py-14 sm:py-20 px-5 bg-kem">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-center text-cam font-heading font-bold tracking-widest text-xs sm:text-sm">VÌ SAO LẠI BẤP BÊNH</p>
+    <h2 class="mt-3 text-2xl sm:text-4xl font-black text-center leading-tight">Trên app có hai loại hiển thị</h2>
+
+    <div class="mt-10 grid sm:grid-cols-2 gap-5">
+      <div class="bg-white rounded-2xl p-6 border-2 border-red-200">
+        <p class="text-4xl">💸</p>
+        <h3 class="mt-3 text-xl font-extrabold text-do">Loại quán phải mua</h3>
+        <ul class="mt-4 space-y-2 text-[15px] text-muc/80">
+          <li>Đến từ các mã đồng tài trợ hoặc quảng cáo hiển thị</li>
+          <li>Tắt đi hết là đơn cũng giảm ngay</li>
+        </ul>
+        <p class="mt-5 pt-4 border-t font-bold text-do">Kết quả: ngày có đơn, ngày không có đơn</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 border-2 border-green-300">
+        <p class="text-4xl">🎁</p>
+        <h3 class="mt-3 text-xl font-extrabold text-xanh">Loại app hỗ trợ</h3>
+        <ul class="mt-4 space-y-2 text-[15px] text-muc/80">
+          <li>Xét từ điểm vận hành và tỷ lệ chuyển đổi của quán</li>
+          <li>Vận hành và chuyển đổi càng tốt càng được app đề xuất</li>
+        </ul>
+        <p class="mt-5 pt-4 border-t font-bold text-xanh">Kết quả: tăng trưởng doanh thu ổn định</p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-center text-lg sm:text-xl font-semibold">
+      Quán có doanh thu bấp bênh là quán chưa tận dụng được loại thứ hai.
+    </p>
+    <p class="mt-3 text-center text-lg sm:text-2xl font-heading font-black text-cam max-w-3xl mx-auto leading-snug">
+      Hệ Thống 04 Điểm Chạm là cách giúp quán tận dụng được thuật toán đề xuất hiển thị của app, để tăng trưởng ổn định dài hạn.
+    </p>
+  </div>
+</section>
+
+<!-- ==== PHẦN 4: BỐN ĐIỂM CHẠM ==== -->
+<section class="py-14 sm:py-20 px-5">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-center text-cam font-heading font-bold tracking-widest text-xs sm:text-sm">CƠ CHẾ</p>
+    <h2 class="mt-3 text-2xl sm:text-4xl font-black text-center leading-tight">Bốn chỗ khách chạm vào quán của anh/chị</h2>
+    <p class="mt-4 text-center text-muc/70 max-w-2xl mx-auto">Một trong bốn chỗ này hỏng là cả gian hàng đứng. Bốn chỉ số nhân với nhau chứ không cộng.</p>
+
+    <div class="mt-10 space-y-4">
+
+      <div class="bg-white rounded-2xl p-6 soc flex gap-5 items-start">
+        <div class="shrink-0 text-center">
+          <p class="text-3xl">👁</p>
+          <p class="mt-1 font-heading font-black text-cam text-xl">01</p>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-extrabold">Hiển thị</h3>
+          <p class="text-sm text-cam font-semibold mt-0.5">Khách nhìn thấy quán trên app</p>
+          <p class="mt-3 text-[15px] text-muc/80">Hai đường vào: mua bằng quảng cáo, hoặc app tự cho vì điểm vận hành cao. Cả hệ thống chạy để chuyển dần sang đường thứ hai.</p>
+          <p class="mt-3 text-sm bg-kem rounded-lg px-3 py-2 inline-block"><strong>Ai lo:</strong> AI Agent đọc khu quanh quán, video khuyến mãi và khung giờ đẩy</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 soc flex gap-5 items-start">
+        <div class="shrink-0 text-center">
+          <p class="text-3xl">👆</p>
+          <p class="mt-1 font-heading font-black text-cam text-xl">02</p>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-extrabold">Truy cập</h3>
+          <p class="text-sm text-cam font-semibold mt-0.5">Khách bấm vào gian hàng</p>
+          <p class="mt-3 text-[15px] text-muc/80">Hiện ra mà không ai bấm thì hiển thị vô nghĩa. Quyết định bởi từ khóa tìm kiếm đúng tên món khách hay gõ, và ảnh bìa cùng ảnh món có đủ hấp dẫn để khách dừng tay không.</p>
+          <p class="mt-3 text-sm bg-kem rounded-lg px-3 py-2 inline-block"><strong>Ai lo:</strong> AI Agent viết mô tả và từ khóa, video ảnh món như chụp studio</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 soc flex gap-5 items-start">
+        <div class="shrink-0 text-center">
+          <p class="text-3xl">🛒</p>
+          <p class="mt-1 font-heading font-black text-cam text-xl">03</p>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-extrabold">Đơn hàng</h3>
+          <p class="text-sm text-cam font-semibold mt-0.5">Khách bấm đặt</p>
+          <p class="mt-3 text-[15px] text-muc/80">Menu có đủ món để đón hết các kiểu khách chưa: khách săn sale, khách đi nhóm đông, khách so giá, khách cũ quay lại. Và món có sắp đúng thứ tự chưa, món hấp dẫn nhất có được đẩy lên trên không.</p>
+          <p class="mt-3 text-sm bg-kem rounded-lg px-3 py-2 inline-block"><strong>Ai lo:</strong> AI Agent sắp menu, AI Agent tính giá không lỗ, video cập nhật lên app</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-vang to-kem rounded-2xl p-6 soc flex gap-5 items-start border-2 border-cam">
+        <div class="shrink-0 text-center">
+          <p class="text-3xl">📦</p>
+          <p class="mt-1 font-heading font-black text-do text-xl">04</p>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-extrabold">Nhận hàng</h3>
+          <p class="text-sm text-do font-semibold mt-0.5">Khách nhận đồ ăn, và app chấm điểm quán</p>
+          <p class="mt-3 text-[15px] text-muc/80">Ba thứ app chấm: đóng mở quán đúng giờ, không hủy đơn, thời gian giao. Điểm này quyết định app có tự đề xuất hiển thị cho quán về sau hay không.</p>
+          <p class="mt-3 text-sm bg-white rounded-lg px-3 py-2 inline-block"><strong>Ai lo:</strong> video hướng dẫn vận hành gian hàng</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 bg-do text-white rounded-2xl p-7 text-center">
+      <p class="text-xl sm:text-3xl font-heading font-black leading-snug">
+        Điểm chạm cuối cùng chính là thứ tạo ra điểm chạm đầu tiên.
+      </p>
+      <p class="mt-3 text-white/85">Giao hàng ngon lành thì app chấm điểm cao, app chấm điểm cao thì app tự đẩy quán lên. Vòng đó quay được là hết cảnh phải mua đơn.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==== PHẦN 5: LỊCH 7 NGÀY ==== -->
+<section class="py-14 sm:py-20 px-5 bg-kem">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-center text-cam font-heading font-bold tracking-widest text-xs sm:text-sm">LỊCH CHẠY</p>
+    <h2 class="mt-3 text-2xl sm:text-4xl font-black text-center leading-tight">Anh/chị làm gì trong 7 ngày</h2>
+
+    <div class="mt-10 grid sm:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl p-6">
+        <p class="font-heading font-black text-cam">NGÀY 1 tới 6</p>
+        <h3 class="mt-2 text-lg font-extrabold">Chạy bốn điểm chạm</h3>
+        <p class="mt-3 text-[15px] text-muc/80">AI Agent lo bốn việc khó nhất. Anh/chị chỉ đọc tên món và giá vốn cho nó. Ba việc còn lại có video chỉ từng thao tác.</p>
+        <p class="mt-4 text-sm font-bold text-do">Khoảng 2 tiếng công của anh/chị</p>
+      </div>
+
+      <div class="bg-do text-white rounded-2xl p-6">
+        <p class="font-heading font-black text-vang">NGÀY 7</p>
+        <h3 class="mt-2 text-lg font-extrabold">Buổi nghiệm thu 1:1</h3>
+        <p class="mt-3 text-[15px] text-white/90">Circle mở gian hàng thật của anh/chị lên, rà lại từ đầu, sửa nốt chỗ còn thiếu rồi bàn giao. 30 tới 45 phút.</p>
+        <p class="mt-4 text-sm font-bold text-vang">Có người soi, không phải tự đoán</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6">
+        <p class="font-heading font-black text-cam">NGÀY 8 tới 30</p>
+        <h3 class="mt-2 text-lg font-extrabold">Giữ điểm chạm 04</h3>
+        <p class="mt-3 text-[15px] text-muc/80">Mở đúng giờ, không hủy đơn, giao nhanh. Mỗi tuần nhìn bảng 4 chỉ số một lần là biết đang tắc ở đâu.</p>
+        <p class="mt-4 text-sm font-bold text-do">Doanh thu đổi ở giai đoạn này</p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-center text-lg sm:text-xl font-semibold">
+      Ba điểm chạm đầu là việc dựng, làm một lần là xong.<br class="hidden sm:block">
+      Điểm chạm 04 là thói quen, và đó là thứ giữ doanh thu.
+    </p>
+  </div>
+</section>
+
+<!-- ==== PHẦN 6: NHẬN ĐƯỢC GÌ ==== -->
+<section class="py-14 sm:py-20 px-5">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl sm:text-4xl font-black text-center leading-tight">Anh/chị nhận được gì</h2>
+    <p class="mt-4 text-center text-muc/70 max-w-2xl mx-auto text-[15px]">
+      AI Agent nói dễ hiểu là mấy con máy làm hộ anh/chị phần khó: đọc khu quanh quán, sắp menu, viết mô tả, tính giá.
+    </p>
+
+    <div class="mt-10 grid sm:grid-cols-2 gap-5">
+      <div class="bg-white rounded-2xl p-6 soc">
+        <h3 class="text-lg font-extrabold text-cam">🤖 4 AI Agent làm phần khó</h3>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Đọc khu quanh quán.</strong> Ai bán cùng món, giá nào đang thắng, chỗ nào chưa ai đứng. 10 phút.</span></li>
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Sắp menu.</strong> Món xếp đúng chỗ khách hay bấm. 10 phút.</span></li>
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Viết mô tả và từ khóa.</strong> Chữ khiến khách dừng lại thay vì lướt qua. 15 phút.</span></li>
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Tính giá không lỗ.</strong> Giá mà app ăn phần trăm rồi vẫn còn lãi. 10 phút.</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 soc">
+        <h3 class="text-lg font-extrabold text-cam">🎬 4 video cầm tay chỉ việc</h3>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Khuyến mãi và khung giờ đẩy.</strong> Chạy đúng lúc đói, đúng mức còn lãi.</span></li>
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Ảnh món như chụp studio.</strong> Chụp một tấm bằng điện thoại, tặng kèm bộ mẫu nền. Khỏi thuê thợ.</span></li>
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Cập nhật lên gian hàng.</strong> Copy và dán từng bước, không sai thao tác.</span></li>
+          <li class="flex gap-2"><span class="text-xanh font-bold">✓</span><span><strong>Vận hành gian hàng.</strong> Giờ mở đóng, cách không hủy đơn, cách rút thời gian giao.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-5 bg-gradient-to-r from-cam to-camdam text-white rounded-2xl p-7 text-center">
+      <h3 class="text-xl sm:text-2xl font-extrabold">👤 Buổi nghiệm thu gian hàng 1:1</h3>
+      <p class="mt-3 max-w-2xl mx-auto text-white/90">
+        Ngày thứ bảy, Circle mở gian hàng thật của anh/chị lên và rà lại: bốn điểm chạm chạy tới đâu, chỗ nào chưa xong, chỗ nào làm rồi mà chưa đúng. Xong buổi đó là bàn giao.
+      </p>
+      <p class="mt-4 font-bold text-vang">Ngày thứ bảy có người soi lại gian hàng của anh/chị, không phải tự làm rồi tự đoán là đúng hay sai.</p>
+    </div>
+
+    <p class="mt-6 text-center text-[15px] text-muc/70">
+      Ba điểm chạm đầu copy sang app khác được. Anh/chị dựng một lần, dùng cho cả GrabFood, ShopeeFood và BeFood.
+    </p>
+  </div>
+</section>
+
+<!-- ==== PHẦN 7: VÌ SAO KHÔNG BỎ DỞ ==== -->
+<section class="py-14 sm:py-20 px-5 bg-muc text-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-vang font-heading font-bold tracking-widest text-xs sm:text-sm">KHÁC VỚI MẤY KHÓA ONLINE</p>
+    <h2 class="mt-3 text-2xl sm:text-4xl font-black leading-tight">Vì sao anh/chị sẽ không bỏ dở</h2>
+    <p class="mt-6 text-lg text-white/85">
+      Khóa học online chết vì không ai kiểm tra. Người ta xem ba video rồi để đấy, hết.
+    </p>
+    <p class="mt-4 text-xl sm:text-2xl font-heading font-black text-vang leading-snug">
+      Ở đây có một ngày phải mang gian hàng ra cho người khác soi.<br>Có hẹn thì người ta làm.
+    </p>
+    <a href="#dat-coc" class="mt-8 inline-block bg-cam text-white font-heading font-extrabold text-lg px-10 py-5 rounded-xl hover:scale-105 transition">
+      Đặt cọc 500.000đ
+    </a>
+  </div>
+</section>
+
+<!-- ==== PHẦN 8: BẰNG CHỨNG ==== -->
+<section class="py-14 sm:py-20 px-5 bg-kem">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-center text-cam font-heading font-bold tracking-widest text-xs sm:text-sm">QUY TRÌNH NÀY CIRCLE ĐÃ CHẠY 5 NĂM</p>
+    <h2 class="mt-3 text-2xl sm:text-4xl font-black text-center leading-tight">Hơn 200 quán trên toàn quốc</h2>
+
+    <div class="mt-10 grid sm:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl p-6 text-center">
+        <h3 class="font-extrabold text-lg">Bún cá Phan Lê</h3>
+        <p class="mt-1 text-xs text-muc/60">Sau 3 tuần triển khai</p>
+        <p class="mt-4 text-3xl font-heading font-black text-do">3.000</p>
+        <p class="text-sm font-semibold">đơn mỗi tháng</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center">
+        <h3 class="font-extrabold text-lg">Đậu Má Mix</h3>
+        <p class="mt-1 text-xs text-muc/60">Mỗi chi nhánh</p>
+        <p class="mt-4 text-3xl font-heading font-black text-do">374</p>
+        <p class="text-sm font-semibold">đơn, 53 triệu một tháng</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center">
+        <h3 class="font-extrabold text-lg">Trà thảo mộc Samy</h3>
+        <p class="mt-1 text-xs text-muc/60">Đơn trên app</p>
+        <p class="mt-4 text-3xl font-heading font-black text-do">+200%</p>
+        <p class="text-sm font-semibold">khách offline tăng gấp đôi</p>
+      </div>
+    </div>
+
+    <p class="mt-6 text-xs text-muc/60 text-center max-w-2xl mx-auto">
+      Đây là kết quả của gói dịch vụ triển khai trọn gói có đội Circle làm cùng, không phải kết quả điển hình của học viên tự làm. Hệ Thống 04 Điểm Chạm là đúng quy trình đó, phần nặng nhất đã đưa vào AI Agent.
+    </p>
+  </div>
+</section>
+
+<!-- ==== PHẦN 9: GIÁ VÀ CAM KẾT ==== -->
+<section class="py-14 sm:py-20 px-5">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-4xl font-black text-center leading-tight">Nếu anh/chị đi thuê từng thứ</h2>
+
+    <div class="mt-8 bg-white rounded-2xl overflow-hidden soc">
+      <div class="divide-y">
+        <div class="flex justify-between px-6 py-4"><span>Khảo sát quán quanh khu</span><span class="font-semibold whitespace-nowrap">3.000.000đ</span></div>
+        <div class="flex justify-between px-6 py-4"><span>Dựng menu và viết mô tả món</span><span class="font-semibold whitespace-nowrap">2.500.000đ</span></div>
+        <div class="flex justify-between px-6 py-4"><span>Chụp một bộ ảnh menu</span><span class="font-semibold whitespace-nowrap">3.000.000đ</span></div>
+        <div class="flex justify-between px-6 py-4"><span>Một buổi tư vấn riêng</span><span class="font-semibold whitespace-nowrap">1.500.000đ</span></div>
+        <div class="flex justify-between px-6 py-4 bg-kem font-extrabold"><span>Cộng lại</span><span class="whitespace-nowrap">10.000.000đ</span></div>
+      </div>
+    </div>
+
+    <p class="mt-5 text-center text-[15px] text-muc/70">Và mỗi lần ra món mới lại phải thuê lại từ đầu.</p>
+
+    <div class="mt-8 bg-gradient-to-br from-cam to-camdam text-white rounded-3xl p-8 text-center">
+      <p class="text-white/85">Hệ Thống 04 Điểm Chạm, trọn gói</p>
+      <p class="mt-2 text-4xl sm:text-5xl font-heading font-black">2.970.000đ</p>
+      <div class="mt-6 bg-white/15 border border-white/30 rounded-2xl p-5">
+        <p class="font-bold text-lg">Anh/chị chỉ cần đặt cọc 500.000đ giữ chỗ</p>
+        <p class="mt-2 text-white/90 text-[15px]">Nghiệm thu xong, thấy gian hàng đã khác thì trả nốt 2.470.000đ. Đúng cách anh/chị vẫn làm với thợ: bàn giao rồi mới thanh toán.</p>
+      </div>
+      <a href="#dat-coc" class="mt-7 inline-block bg-white text-do font-heading font-extrabold text-lg px-10 py-5 rounded-xl hover:scale-105 transition">
+        Đặt cọc 500.000đ
+      </a>
+    </div>
+
+    <div class="mt-8 bg-white rounded-2xl p-6 border-l-4 border-xanh soc">
+      <h3 class="font-extrabold text-lg text-xanh">Cam kết tháng sau hơn tháng trước</h3>
+      <p class="mt-3 text-[15px] text-muc/80">
+        Anh/chị chạy đủ bốn điểm chạm và dự buổi nghiệm thu. Sau 30 ngày, nếu doanh thu tháng này không hơn tháng trước, hoặc vẫn còn ngày trắng đơn, Circle làm tiếp cùng anh/chị đến khi đạt, không lấy thêm tiền.
+      </p>
+      <p class="mt-3 text-sm text-muc/60">Quán mới mở chưa có tháng trước thì mốc so là 7 ngày đầu sau khi lên app.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==== PHẦN 10: CÂU HỎI THƯỜNG GẶP ==== -->
+<section class="py-14 sm:py-20 px-5 bg-kem">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-4xl font-black text-center leading-tight">Anh/chị hay hỏi</h2>
+
+    <div class="mt-8 space-y-3">
+      <details class="bg-white rounded-xl p-5 group">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Tôi không rành máy tính, có làm được không?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Được. Bốn việc khó nhất thì AI Agent làm hộ, anh/chị chỉ đọc tên món và giá vốn cho nó. Ba việc còn lại có video chỉ từng thao tác. Tới ngày nghiệm thu, Circle mở màn hình lên soi và sửa cùng anh/chị. Anh/chị mời cả con cháu hoặc nhân viên vào ngồi chung buổi đó cũng được.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Gần 3 triệu, tôi mới mở đang cạn tiền.<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Anh/chị chỉ cần cọc 500.000đ giữ chỗ. Phần còn lại trả sau buổi nghiệm thu, tức là sau khi đã nhìn thấy gian hàng của mình khác đi.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Mấy khóa online tôi mua rồi để đấy, cái này có khác không?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Khác ở chỗ có ngày nghiệm thu. Khóa online chết vì không ai kiểm tra. Ở đây ngày thứ bảy anh/chị phải mang gian hàng ra cho người khác soi, nên sẽ làm.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Làm xong rồi mà không có đơn thì sao?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Circle làm tiếp cùng anh/chị đến khi đạt, không lấy thêm tiền. Điều kiện là anh/chị chạy đủ bốn điểm chạm và dự buổi nghiệm thu, và buổi nghiệm thu chính là chỗ xác nhận đã làm đủ.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Quán tôi mới mở, chưa có số liệu gì, dùng được không?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Được, và càng sớm càng đỡ. Quán chưa có số thì Circle dùng bản đồ khu vực để nhìn trước: quanh quán có bao nhiêu nơi bán cùng món, giá nào đang thắng, chỗ nào còn trống.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Tôi bán trên cả 3 app, có phải làm 3 lần không?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Ba điểm chạm đầu làm một lần rồi copy sang app khác. Riêng điểm chạm 04 là vận hành thì phải giữ trên cả ba app, vì mỗi app chấm điểm riêng.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">AI Agent là cái gì?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Nói dễ hiểu là mấy con máy làm hộ anh/chị phần khó: đọc khu quanh quán, sắp menu, viết mô tả, tính giá. Anh/chị không phải cài đặt gì, chỉ cung cấp menu và địa chỉ quán.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Mỗi ngày tôi phải bỏ ra bao nhiêu thời gian?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Cả phần dựng gian hàng hết khoảng 2 tiếng, chia ra làm trong 6 ngày. Từ ngày 8 trở đi thì chỉ là thói quen hằng ngày: mở đúng giờ, không hủy đơn, giao nhanh.</p>
+      </details>
+
+      <details class="bg-white rounded-xl p-5">
+        <summary class="font-bold cursor-pointer list-none flex justify-between gap-3">Sau khi đặt cọc thì chuyện gì xảy ra?<span class="text-cam">+</span></summary>
+        <p class="mt-3 text-[15px] text-muc/80">Circle nhắn lại cho anh/chị trong ngày để lấy menu và địa chỉ quán, rồi hẹn lịch buổi nghiệm thu vào ngày thứ bảy. Anh/chị nhận toàn bộ Agent và video ngay hôm đó.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==== PHẦN 11: ĐẶT CỌC VÀ MÃ QR ==== -->
+<section id="dat-coc" class="py-14 sm:py-20 px-5">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-4xl font-black leading-tight">Đặt cọc 500.000đ</h2>
+    <p class="mt-4 text-muc/75">
+      Quét mã bằng ứng dụng ngân hàng của anh/chị. Nội dung chuyển khoản đã điền sẵn, anh/chị không cần gõ gì thêm.
+    </p>
+
+    <div class="mt-8 bg-white rounded-3xl p-7 soc">
+      <!-- THAY 2 CHỖ: SO_TAI_KHOAN va TEN_NGAN_HANG -->
+      <img
+        src="https://qr.sepay.vn/img?acc=SO_TAI_KHOAN&bank=TEN_NGAN_HANG&amount=500000&des=DIEMCHAM&template=compact"
+        alt="Mã VietQR đặt cọc 500.000đ"
+        class="mx-auto w-64 h-64 rounded-xl">
+
+      <div class="mt-6 text-left bg-kem rounded-2xl p-5 space-y-2 text-[15px]">
+        <p><strong>Ngân hàng:</strong> TEN_NGAN_HANG</p>
+        <p><strong>Số tài khoản:</strong> SO_TAI_KHOAN</p>
+        <p><strong>Số tiền:</strong> 500.000đ</p>
+        <p><strong>Nội dung:</strong> DIEMCHAM</p>
+      </div>
+
+      <p class="mt-5 text-sm text-muc/60">Quét được bằng mọi ứng dụng ngân hàng tại Việt Nam</p>
+    </div>
+
+    <div class="mt-8 bg-kem rounded-2xl p-6 text-left">
+      <p class="font-bold">Chuyển xong rồi thì sao?</p>
+      <p class="mt-2 text-[15px] text-muc/80">
+        Circle nhắn lại cho anh/chị ngay trong ngày. Nếu chờ lâu quá hoặc anh/chị muốn hỏi cho rõ trước khi chuyển, gọi số <a href="tel:0964834239" class="text-do font-bold underline">0964.834.239</a> hoặc nhắn Zalo cùng số đó.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==== PHẦN 12: CHÂN TRANG ==== -->
+<footer class="bg-muc text-white/80 py-10 px-5 pb-28 sm:pb-10">
+  <div class="max-w-3xl mx-auto text-center text-sm space-y-2">
+    <p class="font-heading font-black text-white text-lg">Circle Marketing Agency</p>
+    <p>Giải pháp kinh doanh Food Apps</p>
+    <p>HN: Số 124, ngõ 34 Hoàng Cầu, Đống Đa, Hà Nội</p>
+    <p>HCM: 214/60A Nguyễn Oanh, Phường 17, Gò Vấp</p>
+    <p>Hotline và Zalo: <a href="tel:0964834239" class="text-vang font-bold">0964.834.239</a></p>
+  </div>
+</footer>
+
+<!-- ==== PHẦN 13: THANH NÚT CỐ ĐỊNH DƯỚI ĐÁY ==== -->
+<div class="sm:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t-2 border-cam p-3 shadow-2xl">
+  <a href="#dat-coc" class="block text-center bg-do text-white font-heading font-extrabold text-base py-4 rounded-xl">
+    Đặt cọc 500.000đ
+  </a>
+</div>
+
+</body>
+</html>
